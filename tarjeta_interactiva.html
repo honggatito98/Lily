@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta Interactiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffebcc;
+      margin: 0;
+    }
+    .tarjeta {
+      text-align: center;
+      padding: 30px;
+      background-color: #fff8f0;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .tarjeta img {
+      width: 100px;
+      cursor: pointer;
+    }
+    .mensaje {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #ff4d4d;
+    }
+    .boton {
+      padding: 10px 20px;
+      background-color: #ff8c99;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    .boton:hover {
+      background-color: #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+  <div class="tarjeta">
+    <h2>¡Tarjeta para papi! 💖</h2>
+    <!-- Usar el enlace correcto para la imagen -->
+    <img id="lili" src="https://i.ibb.co/5hxgqbTS/Imagen-de-Whats-App-2025-03-19-a-las-15-20-09-b1841f1e.jpg" alt="Gatito Lili">
+    <p>Haz clic en Lili para ver el mensaje especial...</p>
+    <div id="mensaje" class="mensaje">
+      <p>¡Feliz Día, papi! Eres un ángel con patas... de gato, claro! Eres el mejor padre del mundo y te quiero con todo mi corazón. Te mando un abrazo con mis patitas y un miau muy especial... Lily ฅ^•ﻌ•^ฅ</p>
+      <button class="boton" onclick="reproducirSonido()">miau</button>
+    </div>
+  </div>
+
+  <!-- Usar el enlace correcto para el audio -->
+  <audio id="miauAudio" src="https://www.cjoint.com/doc/25_03/OCubdMoBZze_Audio-de-WhatsApp-2025-03-19-a-las-14.mp3"></audio>
+
+  <script>
+    const lili = document.getElementById('lili');
+    const mensaje = document.getElementById('mensaje');
+
+    lili.addEventListener('click', () => {
+      mensaje.style.display = 'block';
+    });
+
+    function reproducirSonido() {
+      const audio = document.getElementById('miauAudio');
+      audio.play();
+    }
+  </script>
+</body>
+</html>
